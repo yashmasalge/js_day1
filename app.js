@@ -1,30 +1,45 @@
-// const rock = document.querySelector('#rock')
-// const paper = document.querySelector('#paper')
-// const scissor = document.querySelector('#scissor')
+const rock = document.querySelector('#rock')
+const paper = document.querySelector('#paper')
+const scissor = document.querySelector('#scissor')
+const board = document.querySelector('#board')
 
-// var Name
+const handler = (event) => {
+    const action = event.target.id
+//    if (action == 'rock'){
+//         // console.log('rock crushes scissors')
+//         board.innerHTML = "rock crushes scissors"
+//    }
+//    else  if (action == 'paper'){
+//     // console.log('paper wraps rock')
+//     board.innerHTML = "paper wraps rock"
+//    }else  if (action == 'scissor'){
+//     // console.log('scissor cuts paper')
+//     board.innerHTML = "scissor cuts paper"
+//    }   
+//    else{
+//        console.log('click something')
+//    }
 
-// console.log(Name)
 
-function logName(Name = "John Doe", age = 18) {
-    // console.log("Nishta")
-    console.log(Name + " You are " + age)
+   switch(action)
+   {
+       case 'rock':
+        board.innerHTML = "rock crushes scissors"
+        break
+
+        case 'paper':
+            board.innerHTML = "paper wraps rock"
+            break
+
+        case 'scissor':
+            board.innerHTML = "scissor cuts paper"
+            break
+
+        default:
+            console.log('click something')
+   }
 }
 
-// Never Misspell the function keyword
-// a function can have multiple parameters
-// You can set default values for the parameters
-// Any variable you define inside a function's body is local to that function
-
-function add(a = 0, b = 0) {
-    return a + b
-}
-
-const add = (a = 0, b = 0) => {
-    return a + b
-}
-
-
-const result = add()
-
-console.log(result)
+rock.addEventListener('click',handler)
+paper.addEventListener('click',handler)
+scissor.addEventListener('click',handler)
