@@ -24,12 +24,17 @@
 
 // Button 
 
-const button = document.querySelector('button')
-const element = document.querySelector('#selectme')
-const element1 = document.querySelector('body')
+// const button = document.querySelector('button')
+// const element = document.querySelector('#selectme')
+// const element1 = document.querySelector('body')
 
-// console.log(button)
+// // console.log(button)
 
-button.addEventListener('click', () => {
-    element1.classList.toggle('dark')
-})
+// button.addEventListener('click', () => {
+//     element1.classList.toggle('dark')
+// })
+
+const balls = document.getElementsByClassName('balls');
+console.log(balls)
+
+const body = document.querySelector('body')
